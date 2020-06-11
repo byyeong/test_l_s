@@ -109,7 +109,7 @@ class TestController
       foreach ($cities as $value) {
         
         $ch = curl_init();
-        $url = 'https://maps.googleapis.com/maps/api/place/details/json'. '?' . urlencode('placeid') . '=' . urlencode($value->place_id). '&' . 'language=ko&key=AIzaSyC_j71ZBncGdl5A5TCRakOaWg_7dL9EWMI&fields=address_component'; // URL
+        $url = 'https://maps.googleapis.com/maps/api/place/details/json'. '?' . urlencode('placeid') . '=' . urlencode($value->place_id). '&' . 'language=ko&fields=address_component'; // URL
 
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
